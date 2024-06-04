@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../css/style.css">
+<title>ANOTAÇÕES</title>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../">HOME</a>
+  <a href="../ssh/">SSH</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<div class="main" id="main">
+    <h2 class="pageTitle">ANOTAÇÕES ARCH LINUX</h2>
+</div>
+
+<div class="main">
+      <div class="noteEfc">
+        <h2 class="titleNote">LOCAL</h2>
+          <p>
+            <pre class="preIn">
+              <div>Your identification has been saved in <font>/home/User_Name/.ssh/id_ed25519</font></div>
+            </pre>
+          </p>
+          <p>
+            <pre class="preIn">
+              <div>Your public key has been saved in <font>/home/User_Name/.ssh/id_ed25519.pub</font></div>
+            </pre>
+          </p>
+      </div>
+
+      <div class="noteEfc">
+        <h2 class="titleNote">VER KEY</h2>
+          <p>
+            <pre class="preIn">
+              <div>cat ~/.ssh/id_ed25519.pub</div>
+            </pre>
+          </p>
+      </div>
+
+      <div class="noteEfc">
+        <h2 class="titleNote">GERAR CHAVE SSH</h2>
+          <p>
+            <pre class="preIn">
+              <div>ssh-keygen -t ed25519 -C "your_email@example.com"</div>
+            </pre>
+          </p>
+      </div>
+
+      <div class="noteEfc">
+        <h2 class="titleNote">TESTAR / LOGAR SSH</h2>
+          <p>
+            <pre class="preIn">
+              <div>ssh -T git@github.com</div>
+            </pre>
+            <pre class="preIn">
+              <div>Senha: SuaSenhaGerada</div>
+            </pre>
+          </p>
+      </div>
+
+      <div class="noteEfc">
+        <h2 class="titleNote">VER O SSH RODANDO</h2>
+          <p>
+            <pre class="preIn">
+              <div>ps aux | grep sshd</div>
+            </pre>
+          </p>
+      </div>
+
+      <div class="noteEfc">
+        <h2 class="titleNote">MATAR O SSH</h2>
+          <p>
+            <pre class="preIn">
+              <div>sudo systemctl stop sshd</div>
+            </pre>
+          </p>
+      </div>
+
+        <div class="noteEfc">
+          <h2 class="titleNote">SSH GITHUB DOC</h2>
+          <p>
+              <b>CONFIGURAR</b>
+          </p>
+          <p>
+              Link para o <a href="https://docs.github.com/pt/authentication/connecting-to-github-with-ssh" target="_blank">SSH GITHUB DOC</a>.
+          </p>
+        </div>
+
+  </div>
+
+</body>
+</html>

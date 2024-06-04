@@ -1,0 +1,83 @@
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #181818;
+    color: #ccc;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 2s;
+  }
+
+  .sidenav a:hover {
+    color: #ccc;
+    background-color: rgb(152, 74, 255);
+    font-weight: bold;
+    transition: 1.2s;
+  }
+
+  .main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    font-size: 1.2rem; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+  }
+  .noteEfc{
+      border-left: solid 5px rgb(60, 21, 110);
+      border-bottom: solid 3px rgb(60, 21, 110);
+      background-color: #acacac;
+      margin: 4px;
+      text-align: justify;
+  }.noteEfc p{
+      margin-left: 5px;
+      color: #000;
+  }
+  .titleNote{
+      background-color: rgb(60, 21, 110);
+      color: #acacac;
+      margin-left: 0px;
+      padding: 3px;
+  }
+  .pageTitle{
+      margin-left: 4px;
+  }
+  .preIn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #181818;
+	  color: rgb(152, 74, 255);
+	  border-radius: 5px;
+	  padding: 5px;
+    margin: 10px;
+    font-size: 0.8rem;
+    overflow: auto;
+    font-style: italic;
+  }
+  .preIn font{
+    color: #fff;
+    font-weight: italic;
+  }
+
+
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
