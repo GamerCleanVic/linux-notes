@@ -52,6 +52,12 @@ body {
       color: #acacac;
       margin-left: 0px;
       padding: 3px;
+  }.titleNote, h2:hover{
+    color: #acacac;
+    transition: 1.2s;
+  }.titleNote, h2:active{
+      color: rgb(41, 241, 241,0);
+      transition: 2s;
   }
   .pageTitle{
       margin-left: 4px;
@@ -76,6 +82,9 @@ body {
     font-weight: italic;
   }
 
+  details{
+    color: rgb(152, 74, 255);
+  }
 
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
