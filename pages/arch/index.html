@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="shortcut icon" href="../../assets/images/iconHTML.png" type="image/x-icon">
+<title>ARCH COMANDOS</title>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../">HOME</a>
+  <a href="../ssh/">SSH</a>
+  <a class="active" href="../arch">ARCH</a>
+</div>
+<div class="main" id="main">
+    <h2 class="pageTitle">COMANDOS ARCH LINUX</h2>
+    <p>Clique na seta para expandir ou recolher o item.</p>
+</div>
+
+<div class="main">
+  <details>
+    <summary>ATUALIZAR ARCH</summary>
+      <div class="noteEfc">
+        <h2 class="titleNote">ATUALIZAR ARCH, AURA, FLATPAK E SNAP</h2>
+          <p>
+            <pre class="preIn">
+              <div>sudo snap refresh && flatpak update && sudo pacman -Syu && sudo aura -Au</div>
+            </pre>
+          </p>
+      </div>
+    </details>
+
+    <details>
+    <summary>RUN OBS FLATPAK</summary>
+      <div class="noteEfc">
+        <h2 class="titleNote">RUN OBS FLATPAK</h2>
+          <p>
+            <pre class="preIn">
+              <div>flatpak run com.obsproject.Studio</div>
+            </pre>
+          </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>OBS Flatpak VAAPI</summary>
+        <div class="noteEfc">
+          <h2 class="titleNote">PLUGINS Flatpak VAAPI para obs</h2>
+            <p>
+              <pre class="preIn">
+                <div>flatpak install org.freedesktop.Platform.GStreamer.gstreamer-vaapi com.obsproject.Studio.Plugin.Gstreamer org.freedesktop.Platform.VulkanLayer.OBSVkCapture com.obsproject.Studio.Plugin.OBSVkCapture</div>
+              </pre>
+            </p>
+            <p>
+              FONTE (POST ORIGINAL FASTOS): <a href="https://plus.diolinux.com.br/t/vaapi-mais-rapido-para-intel-amd-no-linux/46961" target="_blank">DIOLINUX PLUS</a>.
+            </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>instalar nerd fonts</summary>
+          <div class="noteEfc">
+            <h2 class="titleNote">instalar todas as nerd fonts core</h2>
+            <p><textarea class="preIn" rows="5" cols="200">sudo pacman -S noto-fonts-extra noto-fonts-extra ttf-dejavu ttf-dejavu-nerd otf-aurulent-nerd otf-codenewroman-nerd otf-comicshanns-nerd otf-commit-mono-nerd otf-droid-nerd otf-firamono-nerd otf-geist-mono-nerd otf-hasklig-nerd otf-hermit-nerd otf-monaspace-nerd otf-opendyslexic-nerd otf-overpass-nerd ttf-0xproto-nerd ttf-3270-nerd ttf-agave-nerd ttf-anonymouspro-nerd ttf-arimo-nerd ttf-bigblueterminal-nerd ttf-bitstream-vera-mono-nerd ttf-cascadia-code-nerd ttf-cascadia-mono-nerd ttf-cousine-nerd ttf-d2coding-nerd ttf-daddytime-mono-nerd ttf-dejavu-nerd ttf-envycoder-nerd ttf-fantasque-nerd ttf-firacode-nerd ttf-go-nerd ttf-gohu-nerd ttf-hack-nerd ttf-heavydata-nerd ttf-iawriter-nerd ttf-ibmplex-mono-nerd ttf-inconsolata-go-nerd ttf-inconsolata-lgc-nerd ttf-inconsolata-nerd ttf-intone-nerd ttf-iosevka-nerd ttf-iosevkaterm-nerd ttf-iosevkatermslab-nerd ttf-jetbrains-mono-nerd ttf-lekton-nerd ttf-liberation-mono-nerd ttf-lilex-nerd ttf-martian-mono-nerd ttf-meslo-nerd ttf-monofur-nerd ttf-monoid-nerd ttf-mononoki-nerd ttf-mplus-nerd ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-mono ttf-noto-nerd ttf-profont-nerd ttf-proggyclean-nerd ttf-recursive-nerd ttf-roboto-mono-nerd ttf-sharetech-mono-nerd ttf-sourcecodepro-nerd ttf-space-mono-nerd ttf-terminus-nerd ttf-tinos-nerd ttf-ubuntu-mono-nerd ttf-ubuntu-nerd ttf-victor-mono-nerd ttf-zed-mono-nerd && sudo pacman -Syu</textarea></p>
+          </div>
+      </details>
+
+      <details>
+        <summary>pacotes instalados por user</summary>
+          <div class="noteEfc">
+            <h2 class="titleNote">Listar todos os pacotes instalados</h2>
+              <p>
+                <pre class="preIn">
+                  <div>pacman -Qqe | grep -vx "$(pacman -Qqg base-devel)" | grep -vx "$(pacman -Qqm)"</div>
+                </pre>
+              </p>
+              <p>
+                <code>FONTE (POST ORIGINAL NADIR): <a href="https://unix.stackexchange.com/questions/409895/pacman-get-list-of-packages-installed-by-user" target="_blank">UNIX STACK ENCHANGE</a>.</code>
+              </p>
+          </div>
+        </details>
+
+  </div>
+
+</body>
+</html>

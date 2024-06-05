@@ -51,6 +51,11 @@ body {
   }.noteEfc p{
       margin-left: 5px;
       color: #000;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
   }
   .titleNote{
       background-color: rgb(60, 21, 110);
@@ -87,9 +92,16 @@ body {
     color: #fff;
     font-weight: italic;
   }
+  textarea{
+    text-align: justify;
+  }
 
   details{
     color: rgb(152, 74, 255);
+  }
+
+  summary, h2{
+    text-transform: uppercase;
   }
 
   .active{
