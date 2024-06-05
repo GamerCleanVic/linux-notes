@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../../css/style.css">
+<link rel="shortcut icon" href="../../assets/images/iconHTML.png" type="image/x-icon">
+<title>ARCH COMANDOS</title>
+</head>
+<body>
+<div class="sidenav">
+  <a href="../../">INÍCIO</a>
+  <a href="../../pages/arch">ARCH</a>
+  <a href="../../pages/ssh">SSH</a>
+  <a class="active" href="../../pages/git">GIT</a>
+</div>
+<div class="main" id="main">
+    <h2 class="pageTitle">COMANDOS ARCH LINUX</h2>
+    <p>Clique na seta para expandir ou recolher o item.</p>
+</div>
+
+<div class="main">
+  <details>
+    <summary>INSTALAR OPENSSH E CONFIGURÁ-LO</summary>
+      <div class="noteEfc">
+        <h2 class="titleNote">1º É PRECISO INSTALAR OPENSSH E CONFIGURÁ-LO</h2>
+          <p>
+            <code><b>Instalação do OpenSSH Arch Wiki: </b><a href="https://wiki.archlinux.org/title/OpenSSH" target="_blank">OPENSSH ARCH WIKI</a>.</code>
+          </p>
+          <p>
+            O GitHub passou a usar permissão via SSH, etc. e não mais via login e senha ao tentar subir/push as mudanças. Portanto é necessário acessar a documentação para ver onde colocar Key SSH no GitHub.
+            <code><b>CONFIGURAÇÃO:</b> <a href="../../pages/ssh" target="_blank">CONFIGURAR SSH</a>.</code>
+          </p>
+      </div>
+    </details>
+
+  <details>
+    <summary>INSTALAR GIT</summary>
+      <div class="noteEfc">
+        <h2 class="titleNote">INSTALAR GIT NO ARCH LINUX</h2>
+          <p>
+            INSTALAR
+            <pre class="preIn">
+              <div>sudo pacman -S git && sudo pacman -Syu</div>
+            </pre>
+          </p>
+      </div>
+    </details>
+
+    <details>
+      <summary>SETAR DADOS GITHUB</summary>
+        <div class="noteEfc">
+          <h2 class="titleNote">SETAR EMAIL E USUÁRIO</h2>
+            <p>
+              SETAR EMAIL
+              <pre class="preIn">
+                <div>git config --global user.email “YourGithubEmail”</div>
+              </pre>
+            </p>
+            <p>
+              SETAR USUÁRIO
+              <pre class="preIn">
+                <div>git config --global user.name “YourGithubNick”</div>
+              </pre>
+            </p>
+        </div>
+    </details>
+
+    <details>
+      <summary>INICIAR GIT</summary>
+        <div class="noteEfc">
+          <h2 class="titleNote">INICIAR GIT NA PASTA</h2>
+            <p>
+              INICIAR
+              <pre class="preIn">
+                <div>git init</div>
+              </pre>
+            </p>
+        </div>
+      </details>
+
+      <details>
+        <summary>CRIAR ARQUIVO E ADICIONAR</summary>
+          <div class="noteEfc">
+            <h2 class="titleNote">CRIAR ARQUIVO, ADICIONAR E COMMITAR</h2>
+              <p>
+                CRIE UM ARQUIVO
+                <pre class="preIn">
+                  <div>index.php</div>
+                </pre>
+              </p>
+              <p>
+                SE PRECISAR VER SE ESTÁ NA BRANCH CORRETA
+                <pre class="preIn">
+                  <div>git branch</div>
+                </pre>
+              </p>
+              <p>
+                SE PRECISAR BAIXAR AS MUDANÇAS DA BRANCH ONLINE E MESCLAR COM TEUS ARQUIVOS
+                <pre class="preIn">
+                  <div>git pull</div>
+                </pre>
+              </p>
+              <p>
+                ADICIONAR MUDANÇAS EM TODOS OS ARQUIVOS AO COMMIT
+                <pre class="preIn">
+                  <div>git add .</div>
+                </pre>
+              </p>
+              <p>
+                COMMITAR AS MUDANÇAS
+                <pre class="preIn">
+                  <div>git commit -m "QualquerMensagemSobreAsMudanças"</div>
+                </pre>
+              </p>
+              <p>
+                FAZER UPLOAD SINPLES DAS NUDANÇAS
+                <pre class="preIn">
+                  <div>git push</div>
+                </pre>
+              </p>
+          </div>
+        </details>
+
+        <details>
+          <summary>BRANCH VAZIA</summary>
+            <div class="noteEfc">
+              <h2 class="titleNote">CRIAR BRANCH VAZIA</h2>
+                <p>
+                  CRIAR UMA BRANCH VAZIA
+                  <pre class="preIn">
+                    <div>git branch nome_da_branch</div>
+                  </pre>
+                </p>
+            </div>
+          </details>
+
+          <details>
+            <summary>BRANCH À PARTIR DE OUTRA</summary>
+              <div class="noteEfc">
+                <h2 class="titleNote">CRIAR NOVA BRANCH À PARTIR DE OUTRA</h2>
+                  <p>
+                    CRIAR NOVA BRANCH À PARTIR DE OUTRA
+                    <pre class="preIn">
+                      <div>git checkout -b NovaBranchNome BranchAnteriorBase</div>
+                    </pre>
+                  </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>TROCAR</summary>
+                <div class="noteEfc">
+                  <h2 class="titleNote">TROCAR DE BRANCH</h2>
+                    <p>
+                      TROCAR DE BRANCH
+                      <pre class="preIn">
+                        <div>git checkout NomeDaBrach</div>
+                      </pre>
+                    </p>
+                </div>
+              </details>
+
+              <details>
+                <summary>MESCLAR</summary>
+                  <div class="noteEfc">
+                    <h2 class="titleNote">MESCLAR COM OUTRA BRANCH</h2>
+                      <p>
+                        TROCAR DE BRANCH (P/ NÃO MESCLAR BRANCH ERRADA COM OUTRA)
+                        <pre class="preIn">
+                          <div>git checkout NomeDaBrach</div>
+                        </pre>
+                      </p>
+                      <p>
+                        BAIXAR CONTEÚDO DA BRANCH ONLINE E MESCLAR COM A LOCAL EM QUE ESTÁ
+                        <pre class="preIn">
+                          <div>git pull</div>
+                        </pre>
+                      </p>
+                      <p>
+                        MESCLAR
+                        <pre class="preIn">
+                          <div>git merge NomeDaBranchAMesclar</div>
+                        </pre>
+                      </p>
+                      <p>
+                        VER LOG COMMIT
+                        <pre class="preIn">
+                          <div>git reflog</div>
+                        </pre>
+                      </p>
+                      <p>
+                        RESETAR/TROCAR PARA OUTRO COMMIT (SE NECESSÁRIO E AUTORIZADO PELA EQUIPE)
+                        <pre class="preIn">
+                          <div> git reset --hard NºdoCommit</div>
+                        </pre>
+                      </p>
+                  </div>
+                </details>
+
+      <details>
+        <summary>BIBLIOGRAFIA</summary>
+          <div class="noteEfc">
+            <h2 class="titleNote">FONTE</h2>
+              <p>
+                <code>YOUTUBE DEV APRENDER: <a href="https://www.youtube.com/watch?v=kB5e-gTAl_s" target="_blank">DEV APRENDER</a>.</code>
+              </p>
+              <p>
+                <code>DOC GIT: <a href="https://www.git-scm.com/book/pt-br/v2/Come%C3%A7ando-Configura%C3%A7%C3%A3o-Inicial-do-Git" target="_blank">GIT-SCM-COM</a>.</code>
+              </p>
+          </div>
+        </details>
+
+  </div>
+
+</body>
+</html>
